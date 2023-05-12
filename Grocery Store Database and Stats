@@ -1,0 +1,22 @@
+CREATE TABLE convenience_store (id integer primary key, name TEXT, quantity INTEGER, price INTEGER, aisle INTEGER);
+INSERT INTO convenience_store VALUES (1, "water",10, 4.25, 3);
+INSERT INTO convenience_store VALUES (2, "toothpaste", 20, 5.75, 6);
+INSERT INTO convenience_store VALUES (3, "bread", 5, 1.25, 1);
+INSERT INTO convenience_store VALUES (4, "chips", 25,4.99, 2);
+INSERT INTO convenience_store VALUES (5, "banana", 14, 2.99, 8);
+INSERT INTO convenience_store VALUES (6, "chocolate", 5, 5.45, 7);
+INSERT INTO convenience_store VALUES (7, "butter", 12, 3.98, 6);
+INSERT INTO convenience_store VALUES (8, "gum", 20, 3.65, 4);
+INSERT INTO convenience_store VALUES (9, "candies", 30, 6, 2);
+INSERT INTO convenience_store VALUES (10, "paper toilet", 32, 11.99, 1);
+INSERT INTO convenience_store VALUES (11, "milk", 11, 6.35, 2);
+INSERT INTO convenience_store VALUES (12, "coffee cream", 7, 3.89, 4);
+INSERT INTO convenience_store VALUES (13, "energy drinks",13, 4.75, 6);
+INSERT INTO convenience_store VALUES (14, "muffins", 25, 3.55, 8);
+INSERT INTO convenience_store VALUES (15, "cereal", 26, 4.99, 7);
+
+-- display database by ascending price order
+SELECT *FROM convenience_store WHERE Price >1.20 ORDER BY price asc;
+
+--display the higest priced item 
+SELECT MAX (price) FROM convenience_store
